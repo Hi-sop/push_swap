@@ -6,7 +6,7 @@
 /*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:09:33 by khee-seo          #+#    #+#             */
-/*   Updated: 2021/11/25 19:30:39 by khee-seo         ###   ########.fr       */
+/*   Updated: 2021/11/25 20:53:39 by khee-seo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	b_to_a(int range, t_hnt *a, t_hnt *b, int i);
 void	error(char *arr);
 int		count_value(t_hnt *hnt);
 void	node_link(t_node *new, t_hnt *a, int flag);
-void	add_node(int num, t_hnt *a);
+void	add_node(long long int num, t_hnt *a);
 int		atoinsum(char *arr, int len, t_hnt *a);
 
 void	init_data(t_data *data);
@@ -87,5 +87,8 @@ t_node	*headnode(t_hnt *hnt);
 int		sorted(int range, t_hnt *hnt);
 int		rsorted(int range, t_hnt *hnt);
 void	rewinding(t_hnt *a, t_hnt *b, t_data *data);
+
+void	check(int count, int *temp);
+void	duplicate_check(int count, t_hnt *a);
 
 #endif

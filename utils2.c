@@ -6,7 +6,7 @@
 /*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:15:58 by khee-seo          #+#    #+#             */
-/*   Updated: 2021/11/25 20:02:17 by khee-seo         ###   ########.fr       */
+/*   Updated: 2021/11/25 20:09:11 by khee-seo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	init_data(t_data *data)
 	data->rbc = 0;
 	data->pac = 0;
 	data->pbc = 0;
-	data->opt = 0;
 }
 
 t_node	*headnode(t_hnt *hnt)

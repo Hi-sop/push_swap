@@ -6,7 +6,7 @@
 /*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:14:19 by khee-seo          #+#    #+#             */
-/*   Updated: 2021/11/25 19:58:51 by khee-seo         ###   ########.fr       */
+/*   Updated: 2021/11/25 20:54:58 by khee-seo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,12 @@ void	node_link(t_node *new, t_hnt *a, int flag)
 	}
 }
 
-void	add_node(int num, t_hnt *a)
+void	add_node(long long int num, t_hnt *a)
 {
 	t_node	*new;
 
+	if (num > 2147483647 || num < -2147483648)
+		error("int max over");
 	new = (t_node *)malloc(sizeof(t_node));
 	if (!(new))
 		error("new node malloc error");

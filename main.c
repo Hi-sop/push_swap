@@ -6,7 +6,7 @@
 /*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:55:04 by khee-seo          #+#    #+#             */
-/*   Updated: 2021/11/25 19:40:55 by khee-seo         ###   ########.fr       */
+/*   Updated: 2021/11/25 20:28:22 by khee-seo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	count = count_value(&a);
+	duplicate_check(count, &a);
 	if (count <= 3)
 		simple_a(&a, &b, count);
 	else if (count == 5)
