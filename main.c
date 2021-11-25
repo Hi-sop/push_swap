@@ -1,4 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 18:55:04 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 19:40:55 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
+
+void	free_node(t_hnt *hnt)
+{
+	t_node	*node;
+	t_node	*temp;
+
+	if (hnt->head)
+		return ;
+	node = hnt->head;
+	while (node)
+	{
+		temp = node->next;
+		free(node);
+		node = temp;
+	}
+}
 
 int	argv_valid(char c, int flag)
 {
@@ -23,10 +51,10 @@ int	argv_valid(char c, int flag)
 	return (1);
 }
 
-void	argv_atoi(char *argv, t_hnt *a) 
+void	argv_atoi(char *argv, t_hnt *a)
 {
 	int	i;
-	int st;
+	int	st;
 
 	i = 0;
 	st = i;
@@ -57,32 +85,12 @@ void	init_hnt(t_hnt *a, t_hnt *b)
 	b->tail = NULL;
 }
 
-void	test(t_hnt *a, t_hnt *b)
+int	main(int argc, char **argv)
 {
-	t_node *temp;
-	
-	temp = a->head;
-	printf("-a-\n");
-	while (temp)
-	{
-		printf("%d\n", temp->value);
-		temp = temp->next;
-	}
-	temp = b->head;
-	printf("-b-\n");
-	while (temp)
-	{
-		printf("%d\n", temp->value);
-		temp = temp->next;
-	}
-}
-
-int main(int argc, char **argv)
-{
-	int i;
-	int	count;
-	t_hnt a;
-	t_hnt b;
+	int		i;
+	int		count;
+	t_hnt	a;
+	t_hnt	b;
 
 	init_hnt(&a, &b);
 	if (argc < 2)
@@ -94,13 +102,13 @@ int main(int argc, char **argv)
 		i++;
 	}
 	count = count_value(&a);
-	if (count <= 3) 
+	if (count <= 3)
 		simple_a(&a, &b, count);
 	else if (count == 5)
 		five(&a, &b, 0, 0);
 	else
 		a_to_b(count, &a, &b);
-//	test(&a, &b);
-//	free도 만들것
+	free_node(&a);
+	free_node(&b);
 	return (0);
 }

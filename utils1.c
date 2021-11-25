@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils1.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 19:14:19 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 19:58:51 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	error(char *arr)
 {
-	int i;
+	int	i;
 
 	write(1, "Error\n", 6);
 	i = 0;
@@ -16,8 +28,8 @@ void	error(char *arr)
 
 int	count_value(t_hnt *hnt)
 {
-	t_node *temp;
-	int	count;
+	t_node	*temp;
+	int		count;
 
 	count = 0;
 	temp = hnt->head;
@@ -52,7 +64,7 @@ void	node_link(t_node *new, t_hnt *a, int flag)
 
 void	add_node(int num, t_hnt *a)
 {
-	t_node *new;
+	t_node	*new;
 
 	new = (t_node *)malloc(sizeof(t_node));
 	if (!(new))
@@ -66,10 +78,10 @@ void	add_node(int num, t_hnt *a)
 
 int	atoinsum(char *arr, int len, t_hnt *a)
 {
-	int i;
-	int j;
-	int max;
-	long long int num;
+	int				i;
+	int				j;
+	int				max;
+	long long int	num;
 
 	i = 0;
 	num = 0;

@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   simplecase2.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 19:11:56 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 19:49:39 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	passto_a(t_hnt *a, t_hnt *b)
 {
-	t_node *temp;
+	t_node	*temp;
 
 	pa(a, b);
 	temp = a->head;
@@ -45,7 +57,7 @@ void	passto_b(t_hnt *a, t_hnt *b, int index)
 void	findsmallbig(t_hnt *a, t_hnt *b, int small, int big)
 {
 	t_node	*temp;
-	int index;
+	int		index;
 
 	temp = a->head;
 	index = 1;
@@ -62,14 +74,14 @@ void	findsmallbig(t_hnt *a, t_hnt *b, int small, int big)
 		index++;
 	}
 	three_a(a, a->head->value, a->head->next->value,
-			a->head->next->next->value);
+		a->head->next->next->value);
 }
 
 void	five(t_hnt *a, t_hnt *b, int small, int big)
 {
 	t_node	*temp;
-	int	index;
-	
+	int		index;
+
 	index = 1;
 	temp = a->head;
 	while (temp)

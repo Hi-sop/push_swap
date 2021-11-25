@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_pivot.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 18:51:09 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 19:33:14 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	tempsort(int range, int *arr)
@@ -26,9 +38,9 @@ void	tempsort(int range, int *arr)
 
 void	find_pivot(int range, t_hnt *hnt, int *s_pivot, int *b_pivot)
 {
-	t_node *node;
-	int	*temp;
-	int	i;
+	t_node	*node;
+	int		*temp;
+	int		i;
 
 	temp = (int *)malloc(sizeof(int) * range);
 	if (temp == NULL)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils2.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 19:15:58 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 20:02:17 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	init_data(t_data *data)
@@ -23,8 +35,8 @@ t_node	*headnode(t_hnt *hnt)
 int	sorted(int range, t_hnt *hnt)
 {
 	t_node	*node;
-	int	i;
-	int num;
+	int		i;
+	int		num;
 
 	if (range < 1)
 		return (1);
@@ -47,10 +59,10 @@ int	sorted(int range, t_hnt *hnt)
 
 int	rsorted(int range, t_hnt *hnt)
 {
-	t_node *node;
-	int	i;
-	int	num;
-	
+	t_node	*node;
+	int		i;
+	int		num;
+
 	if (range < 1)
 		return (1);
 	i = 0;

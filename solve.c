@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   solve.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khee-seo <khee-seo@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 19:13:18 by khee-seo          #+#    #+#             */
+/*   Updated: 2021/11/25 19:55:09 by khee-seo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	solve_a(int range, t_hnt *a, t_hnt *b, t_data *data)
 {
-	int	i;
-	t_node *node;
+	int		i;
+	t_node	*node;
 
 	i = 0;
 	while (i < range)
@@ -29,8 +41,8 @@ void	solve_a(int range, t_hnt *a, t_hnt *b, t_data *data)
 
 void	solve_b(int range, t_hnt *a, t_hnt *b, t_data *data)
 {
-	int i;
-	t_node *node;
+	int		i;
+	t_node	*node;
 
 	i = 0;
 	while (i < range)
@@ -69,7 +81,7 @@ void	a_to_b(int range, t_hnt *a, t_hnt *b)
 	find_pivot(range, a, &data.s_pivot, &data.b_pivot);
 	solve_a(range, a, b, &data);
 	rewinding(a, b, &data);
-	a_to_b(data.rac + data.opt, a, b);
+	a_to_b(data.rac, a, b);
 	b_to_a(data.rbc, a, b, 0);
 	b_to_a(data.pbc - data.rbc, a, b, 0);
 }
@@ -98,5 +110,5 @@ void	b_to_a(int range, t_hnt *a, t_hnt *b, int i)
 	a_to_b(data.pac - data.rac, a, b);
 	rewinding(a, b, &data);
 	a_to_b(data.rac, a, b);
-	b_to_a(data.rbc + data.opt, a, b, 0);
+	b_to_a(data.rbc, a, b, 0);
 }
